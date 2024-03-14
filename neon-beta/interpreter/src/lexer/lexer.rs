@@ -1,7 +1,8 @@
 use std::str;
 
-pub fn lexer(contents: &'static str) -> Vec<&'static str> {
-    let lines: Vec<&str> = contents.split('\n').collect();
-    return lines;
+pub fn lexer(contents: String) -> Vec<&'static str> {
+    contents
+        .lines()
+        .filter(|&line| !line.trim().is_empty())
+        .collect()
 }
-
