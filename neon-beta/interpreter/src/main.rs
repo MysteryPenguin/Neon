@@ -6,5 +6,5 @@ pub mod lexer;
 fn main() {
     let args: Vec<String> = env::args().collect();
     let content = lexers::parse(args[1].clone());
-    println!("{:?}", content);
+    println!("{:#?}", content);
 }
